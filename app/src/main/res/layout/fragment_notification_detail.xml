@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mainmenu.notification.detail.NotificationDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <ss.com.bannerslider.Slider
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@color/grey"
+                app:slider_animateIndicators="true"
+                app:slider_interval="3000"
+                app:slider_loopSlides="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/notification_image" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="เจ้าหน้าที่นิติโครงการ The ESSE สุขุมวิท 36"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="รายงานความคืบหน้าการซ่อมแซมผนังหลังบ้าน"
+                    android:textColor="@color/_282726"
+                    android:lineSpacingMultiplier="0.9"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="28 มิ.ย. 2561 -16:00"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#DFDFDE" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="เรียน ท่านสมศักดิ์ ชัยสวัสดิ์\n\nจากที่ลูกค้าได้แจ้งแก้ไขผนังหลังบ้านที่ไม่ได้ มารตรฐานนั้นทางโครงการขอแจ้งว่าจะทำการ ซ่อมแซมแล้วเสร็จภายในวันที่ 5 กรกฎาคม 2561 และสามารถเข้าตรวจรับในวันที่ 7 กรกฎาคม 2561 เป็นต้นไป\n\nจึงเรียนมาเพื่อทราบ" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_primary_btn"
+                    android:text="ดู Activity"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

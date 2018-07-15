@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="my_config_activityDefaultDur">220</integer>
+    <integer name="my_config_activityShortDur">150</integer>
+    <integer name="my_config_activityLongDur">400</integer>
+
+    <!--text-->
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_normal">16sp</dimen>
+    <dimen name="text_big">18sp</dimen>
+    <dimen name="text_bigger">22sp</dimen>
+    <dimen name="text_biggest">24sp</dimen>
+    <dimen name="percent">48sp</dimen>
+    <dimen name="percent_unit">24sp</dimen>
+
+    <dimen name="default_padding_half">8dp</dimen>
+    <dimen name="default_padding_half_2">4dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="default_padding_2">24dp</dimen>
+    <dimen name="login_logo_width">125dp</dimen>
+    <dimen name="btn_height">48dp</dimen>
+    <dimen name="btn_height_2">60dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

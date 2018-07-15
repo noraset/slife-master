@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mainmenu.privilege.PrivilegeDetailFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary"
+        android:elevation="6dp"
+        android:minHeight="?android:attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Detail"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginRight="16dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/primary"
+                android:drawableLeft="@drawable/left_arrow_white" />
+
+            <Button
+                android:id="@+id/btnPrivilegeHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:textSize="14sp"
+                android:paddingTop="6dp"
+                android:gravity="end"
+                android:textAlignment="textEnd"
+                android:text="Share" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <ss.com.bannerslider.Slider
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@color/grey"
+                app:slider_animateIndicators="true"
+                app:slider_interval="3000"
+                app:slider_loopSlides="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@color/grey"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/notification_image" />
+
+                <TextView
+                    android:id="@+id/place_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/icon"
+                    android:text="Farm Design"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@+id/icon"
+                    android:layout_marginLeft="15dp"
+
+                    android:layout_below="@+id/place_title">
+
+                    <ImageView
+                        android:id="@+id/map_icon"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/map_pin_icon"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="7dp"
+                         />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="สาขาพระราม 9" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:lineSpacingMultiplier="0.9"
+                    android:layout_marginBottom="5dp"
+                    android:text="ส่วนลดพิเศษ 10% สำหรับเบเกอรี่และเครื่องดื่ม ที่ Farm Design" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gold"
+                    android:text="Free" />
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ระยะเวลา : 16 มิ.ย. - 10 ก.ค. 2561" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#DFDFDE"
+                    android:layout_height="1dp" />
+
+                <TextView
+                    android:id="@+id/detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. ใช้ 300 Point แลกส่วนลดพิเศษ สำหรับเบเกอรี่และเครื่องดื่มที่ Farm Design เฉพาะสาขา พระราม 9 เท่านั้น
+2. กรุณานำโทรศัพท์เคลื่อนที่ของท่านมากดรับสิทธิ์ ณ จุดจำหน่ายสินค้าและไม่สามารถรับสิทธิ์ได้จากการแสดงภาพที่หน้าจอโทรศัพท์
+3. สงวนสิทธิ์ สำหรับลูกค้าของ Singha Estase เท่านั้น
+4. กรณีทำการแลกพอยท์แล้วไม่สามารถยกเลิกได้ทุกกรณี" />
+
+                <Button
+                    android:id="@+id/btnRedeem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_primary_btn"
+                    android:text="รับสิทธิ์"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

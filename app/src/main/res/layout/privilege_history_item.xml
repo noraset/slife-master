@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/status"
+        android:text="ส่วนลดพิเศษ 10% สำหรับ เบเกอรี่และเครื่องดื่ม ทดสอบทดสอบทดสอบ"
+        android:textColor="@color/black"
+        android:lineSpacingMultiplier="0.9"
+        android:layout_marginBottom="5dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:text="01-06-2018 12:30"
+        android:textColor="@color/grey02"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="Free"
+        android:textColor="@color/_b7955b"
+        android:textSize="17sp" />
+
+</RelativeLayout>

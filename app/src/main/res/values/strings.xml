@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SLife</string>
+    <string name="preference_file_key" translatable="false">APP_SHARE_PREFERENCE</string>
+    <string name="network_error">กรุณาเชื่อมต่ออินเตอร์เนต</string>
+    <string name="system_error">ระบบเกิดข้อผิดพลาด</string>
+    <string name="waiting">กรุณารอสักครู่</string>
+    <string name="alert_title">แจ้งเตือน</string>
+    <string name="btn_ok">ตกลง</string>
+    <string name="btn_cancel">ยกเลิก</string>
+    <string name="confirm_logout">ยืนยันการออกจากระบบ</string>
+    <string name="exit">กด BACK อีกครั้งเพื่อออกจากแอพ</string>
+    <string name="no_data">ยังไม่มีรายการ</string>
+
+    <string name="facebook_app_id">515579601984667</string>
+    <string name="fb_login_protocol_scheme">fb515579601984667</string>
+
+    <string name="splashscreen_text">Singha Estate</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_shop_list">Shop &amp; Restaurant</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_restaurant">Restaurant</string>
+    <string name="search">Search</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
