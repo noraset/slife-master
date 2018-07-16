@@ -51,9 +51,9 @@ class HomeFragment : Fragment() {
         mMenus.add(HomeItem("", "สแกนบาร์โค้ด"))
         mMenus.add(HomeItem("", "สแกนบาร์โค้ด"))
 
-        mImages.add("http://icons.iconarchive.com/icons/graphicloads/100-flat/256/home-icon.png")
-        mImages.add("http://icons.iconarchive.com/icons/graphicloads/100-flat/256/home-icon.png")
-        mImages.add("http://icons.iconarchive.com/icons/graphicloads/100-flat/256/home-icon.png")
+        mImages.add("http://sl.glitter-graphics.net/pub/530/530072lntiktklog.png")
+        mImages.add("http://sl.glitter-graphics.net/pub/530/530072lntiktklog.png")
+        mImages.add("http://sl.glitter-graphics.net/pub/530/530072lntiktklog.png")
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

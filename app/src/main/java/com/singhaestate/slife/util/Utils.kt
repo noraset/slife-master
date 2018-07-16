@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.os.Build
+import android.view.View
+import android.view.animation.AnimationUtils
 import android.view.inputmethod.InputMethodManager
 import com.singhaestate.slife.R
 import java.text.DecimalFormat
@@ -84,5 +86,16 @@ object Utils {
         val imm = context?.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
     }
+
+    fun setLayoutAnimSlideInRightToLeft(panel: View, ctx: Context) {
+        val animation = AnimationUtils.loadAnimation(ctx, R.anim.slide_in_right)
+        panel.startAnimation(animation)
+    }
+
+    fun setLayoutAnimSlideOutLeftToRight(panel: View, ctx: Context) {
+        val animation = AnimationUtils.loadAnimation(ctx, R.anim.slide_out_right)
+        panel.startAnimation(animation)
+    }
+
 
 }

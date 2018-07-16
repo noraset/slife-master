@@ -20,6 +20,7 @@ import com.google.android.gms.maps.model.Marker
 import com.singhaestate.slife.R
 import com.singhaestate.slife.ui.mainmenu.shoplist.search.SearchActivity
 import com.singhaestate.slife.util.Contextor.context
+import com.singhaestate.slife.util.Utils
 import kotlinx.android.synthetic.main.activity_maps.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
@@ -101,14 +102,17 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
     }
 
     private fun closeFilterAndSearch() {
+        Utils.setLayoutAnimSlideOutLeftToRight(view_overlay_filter, applicationContext)
         view_overlay_filter.visibility = View.GONE
     }
 
     private fun closeFilter() {
+        Utils.setLayoutAnimSlideOutLeftToRight(view_overlay_filter, applicationContext)
         view_overlay_filter.visibility = View.GONE
     }
 
     private fun openFilter() {
+        Utils.setLayoutAnimSlideInRightToLeft(view_overlay_filter, applicationContext)
         view_overlay_filter.visibility = View.VISIBLE
     }
 
