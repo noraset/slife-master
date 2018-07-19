@@ -131,8 +131,8 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClick
         mMenus.add(FilterItem("", "สแกนบาร์โค้ด", "Restaurant", true))
         mMenus.add(FilterItem("", "สแกนบาร์โค้ด", "Restaurant", true))
         mFloorList.add("G")
+        mFloorList.add("F")
         mFloorList.add("1")
-        mFloorList.add("2")
         mFloorList.add("3")
         mFloorList.add("4")
         if (intent.getStringExtra("floor") != null) {
@@ -156,6 +156,7 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClick
         } else {
             mFloor = mFloorList[0]
         }
+        setPlan(mFloor)
         for (location in ShopListUtil.getInstance().getResultInfo()) {
             mLocation.add(LocationNearBy(location.id, location.name, location.floor, location.type,
                     location.address.geo.lat, location.address.geo.lng))
@@ -180,23 +181,27 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClick
                 layoutBottom.visibility = View.GONE
                 shopId = null
                 mFloor = floor
-                when (position) {
-                    0 -> {
-                        plan.position(center, 100f, 100f)
-                                .image(BitmapDescriptorFactory.fromResource(R.drawable.plan_g))
-                    }
-                    1 -> {
-                        plan.position(center, 100f, 100f)
-                                .image(BitmapDescriptorFactory.fromResource(R.drawable.plan_1))
-                    }
-                    2 -> {
-                        plan.position(center, 100f, 100f)
-                                .image(BitmapDescriptorFactory.fromResource(R.drawable.plan_2))
-                    }
-                }
+                setPlan(floor)
                 loadLocation()
             }
         })
+    }
+
+    private fun setPlan(i: String) {
+        when (i) {
+            "G" -> {
+                plan.position(center, 100f, 100f)
+                        .image(BitmapDescriptorFactory.fromResource(R.drawable.plan_g))
+            }
+            "1" -> {
+                plan.position(center, 100f, 100f)
+                        .image(BitmapDescriptorFactory.fromResource(R.drawable.plan_1))
+            }
+            "F" -> {
+                plan.position(center, 100f, 100f)
+                        .image(BitmapDescriptorFactory.fromResource(R.drawable.plan_2))
+            }
+        }
     }
 
 
@@ -249,9 +254,6 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClick
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-
-        plan.position(center, 100f, 100f)
-                .image(BitmapDescriptorFactory.fromResource(R.drawable.plan_g))
 
         mMap!!.setOnMapLongClickListener {
             val uri = String.format(Locale.ENGLISH, "http://maps.google.com/maps?daddr=%s,%s (%s)", it.latitude, it.longitude, "Where the party is at")
