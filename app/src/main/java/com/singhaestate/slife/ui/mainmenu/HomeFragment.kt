@@ -51,9 +51,10 @@ class HomeFragment : Fragment() {
         mMenus.add(HomeItem("", "สแกนบาร์โค้ด"))
         mMenus.add(HomeItem("", "สแกนบาร์โค้ด"))
 
-        mImages.add("http://sl.glitter-graphics.net/pub/530/530072lntiktklog.png")
-        mImages.add("http://sl.glitter-graphics.net/pub/530/530072lntiktklog.png")
-        mImages.add("http://sl.glitter-graphics.net/pub/530/530072lntiktklog.png")
+        mImages.add("https://cdn.cbre.co.th/media/property_gallery/158478/wmgallery-SC-Tower_building_800x533.jpg?15217938421")
+        mImages.add("https://cdn.cbre.co.th/media/property_gallery/158478/wmgallery-SC-Tower_building_800x533.jpg?15217938421")
+        mImages.add("https://cdn.cbre.co.th/media/property_gallery/158478/wmgallery-SC-Tower_building_800x533.jpg?15217938421")
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -138,7 +139,7 @@ class HomeFragment : Fragment() {
         override fun getItemCount(): Int = mImages.size
 
         override fun onBindImageSlide(position: Int, imageSlideViewHolder: ImageSlideViewHolder?) {
-//            imageSlideViewHolder?.bindImageSlide(R.drawable.home_image)
+//            imageSlideViewHolder?.bindImageSlide(mImages[position])
             Glide.with(this@HomeFragment.context!!)
                     .load(mImages[position])
                     .into(imageSlideViewHolder!!.imageView)

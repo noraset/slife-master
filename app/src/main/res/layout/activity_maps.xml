@@ -8,152 +8,108 @@
     android:layout_height="match_parent"
     tools:context=".ui.mainmenu.buildinginfo.MapsActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:minHeight="?android:attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="แจ้งเตือน"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_directory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:clickable="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_format_list_bulleted" />
+
+        <ImageView
+            android:id="@+id/btn_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:clickable="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_info" />
+
+    </android.support.v7.widget.Toolbar>
+
     <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_search_white"
+            android:gravity="center|left"
+            android:text="@string/search"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_slider_no_fill" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/search_bar"
+        android:background="@color/grey" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_below="@+id/line"
+        tools:context=".ui.mainmenu.buildinginfo.MapsActivity" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:background="@color/blue"
-            android:elevation="6dp"
-            android:minHeight="?android:attr/actionBarSize"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
 
-            <TextView
-                android:id="@+id/toolbar_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="แจ้งเตือน"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/btn_filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|right"
-                android:clickable="true"
-                android:padding="8dp"
-                app:srcCompat="@drawable/ic_format_list_bulleted" />
-
-            <ImageView
-                android:id="@+id/btn_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|right"
-                android:clickable="true"
-                android:padding="8dp"
-                app:srcCompat="@drawable/ic_info" />
-
-        </android.support.v7.widget.Toolbar>
-
-        <LinearLayout
-            android:id="@+id/search_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_search_white"
-                android:gravity="center"
-                android:text="@string/search"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/grey" />
-
-        <fragment
-            android:id="@+id/map"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".ui.mainmenu.buildinginfo.MapsActivity" />
+        <include layout="@layout/shop_item" />
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/view_overlay_filter"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:visibility="gone">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarFilter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:minHeight="?android:attr/actionBarSize">
-
-            <TextView
-                android:id="@+id/toolbar_title_filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Filter"
-                android:textColor="@color/primary"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btn_select"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|right"
-                android:background="@drawable/rounded_border_white_button"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:text="Select All"
-                android:textColor="@color/primary"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-        </android.support.v7.widget.Toolbar>
-
-        <Button
-            android:id="@+id/btn_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:background="@drawable/rounded_border_white_button"
-            android:paddingLeft="32dp"
-            android:paddingRight="32dp"
-            android:text="เสร็จสิ้น"
-            android:textColor="@color/primary"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <GridView
-            android:id="@+id/listView"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/btn_search"
-            android:layout_below="@+id/toolbarFilter"
-            android:gravity="center"
-            android:horizontalSpacing="10dp"
-            android:numColumns="3"
-            android:paddingBottom="20dp"
-            android:stretchMode="columnWidth"
-            android:verticalSpacing="10dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listViewFloor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp" />
 
 
-    </RelativeLayout>
+    <include layout="@layout/filter_layout" />
 
 </RelativeLayout>

@@ -59,6 +59,9 @@ object DialogHelper {
                 .onPositive { _, _ ->
                     callback?.onClickOK()
                 }
+                .onNegative { _, _ ->
+                    callback?.onClickCancel()
+                }
                 .build()
         alertDialog!!.show()
     }
@@ -78,6 +81,7 @@ object DialogHelper {
 
     interface DialogCallback {
         fun onClickOK()
+        fun onClickCancel()
     }
 
     interface DialogCallbackItemSelected {

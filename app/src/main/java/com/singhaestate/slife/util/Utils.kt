@@ -97,5 +97,23 @@ object Utils {
         panel.startAnimation(animation)
     }
 
+    fun setLayoutAnimSlideInBottomToTop(panel: View, ctx: Context) {
+        val animation = AnimationUtils.loadAnimation(ctx, R.anim.slide_in_bottom)
+        panel.startAnimation(animation)
+    }
 
+    fun setLayoutAnimSlideOutTopToBottom(panel: View, ctx: Context) {
+        val animation = AnimationUtils.loadAnimation(ctx, R.anim.slide_out_bottom)
+        panel.startAnimation(animation)
+    }
+
+    fun setLayoutAnimSlideFadeIn(panel: View, ctx: Context) {
+        val animation = AnimationUtils.loadAnimation(ctx, R.anim.fade_in)
+        panel.startAnimation(animation)
+    }
+
+    fun setLayoutAnimSlideFadeOut(panel: View, ctx: Context) {
+        val animation = AnimationUtils.loadAnimation(ctx, R.anim.fade_out)
+        panel.startAnimation(animation)
+    }
 }

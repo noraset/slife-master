@@ -187,7 +187,8 @@
                     android:text="ดูในแผนที่"
                     android:textColor="@color/primary"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="visible" />
 
             </LinearLayout>
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mainmenu.buildinginfo.InformationPolicyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="แจ้งเตือน"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Material is the metaphor.\n\nA material metaphor is the unifying theory of a rationalized space and a system of motion.The material is grounded in tactile reality, inspired by the study of paper and ink, yettechnologically advanced and open to imagination and magic.\nSurfaces and edges of the material provide visual cues that are grounded in reality. Theuse of familiar tactile attributes helps users quickly understand affordances. Yet theflexibility of the material creates new affordances that supercede those in the physicalworld, without breaking the rules of physics.\nThe fundamentals of light, surface, and movement are key to conveying how objects move,interact, and exist in space and in relation to each other. Realistic lighting showsseams, divides space, and indicates moving parts.\n\nBold, graphic, intentional.\n\n" />
+
+    </ScrollView>
+
+</LinearLayout>
